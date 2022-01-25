@@ -200,7 +200,7 @@ func GetLatestReleaseTagsSorted(org string, repo string) ([]string, error) {
 		return nil, ErrGettingLatestReleaseTag(err)
 	}
 
-	body, err := io.ReadAll(resp.Body)
+	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return nil, ErrGettingLatestReleaseTag(err)
 	}
